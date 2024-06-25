@@ -7,4 +7,8 @@ return {
     'sunjon/shade.nvim',
     opts = {},
   },
+  --  {
+  --    'mg979/vim-visual-multi',
+  --    branch = 'master',
+  --  },
 }

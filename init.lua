@@ -58,7 +58,7 @@ Kickstart Guide:
 
   Next, run AND READ `:help`.
     This will open up a help window with some basic information
-    about reading, navigating and searching the builtin help documentation.
+    about reading, navigating and searching the builin help documentation.
 
     This should be the first place you go to look when you're stuck or confused
     with something. It's one of my favorite Neovim features.
@@ -569,6 +569,7 @@ require('lazy').setup({
         -- gopls = {},
         pyright = {},
         rust_analyzer = {},
+        glsl_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -729,11 +730,11 @@ require('lazy').setup({
           -- Accept ([y]es) the completion.
           --  This will auto-import if your LSP supports it.
           --  This will expand snippets if the LSP sent a snippet.
-          ['<C-y>'] = cmp.mapping.confirm { select = true },
+          -- ['<C-y>'] = cmp.mapping.confirm { select = true },
 
           -- If you prefer more traditional completion keymaps,
           -- you can uncomment the following lines
-          --['<CR>'] = cmp.mapping.confirm { select = true },
+          ['<CR>'] = cmp.mapping.confirm { select = true },
           --['<Tab>'] = cmp.mapping.select_next_item(),
           --['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
@@ -778,14 +779,18 @@ require('lazy').setup({
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    'folke/tokyonight.nvim',
+    'comfysage/evergarden',
+    -- 'mikesmithgh/gruvsquirrel.nvim',
+    -- 'sainnhe/gruvbox-material',
+    -- 'folke/tokyonight.nvim',
+    -- 'nyoom-engineering/oxocarbon.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-night'
-
+      vim.opt.background = 'dark'
+      vim.cmd.colorscheme 'evergarden'
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
     end,
