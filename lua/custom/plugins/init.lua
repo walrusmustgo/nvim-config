@@ -3,12 +3,16 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-  {
-    'sunjon/shade.nvim',
-    opts = {},
-  },
   --  {
-  --    'mg979/vim-visual-multi',
-  --    branch = 'master',
+  --    'sunjon/shade.nvim',
+  --    opts = {},
   --  },
+  --  {
+  --    'nolanderc/glsl_analyzer',
+  --    opts = {},
+  --  },
+  {
+    'mg979/vim-visual-multi',
+    branch = 'master',
+  },
 }
