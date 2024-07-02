@@ -580,6 +580,7 @@ require('lazy').setup({
         glsl_analyzer = {
           filetypes = { 'glsl', 'vert', 'frag', 'comp' },
         },
+        gdtoolkit = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
