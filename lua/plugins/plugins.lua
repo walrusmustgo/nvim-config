@@ -7,4 +7,8 @@ return {
     "supermaven-inc/supermaven-nvim",
     opts = {},
   },
+  {
+    "edluffy/hologram.nvim",
+    opts = {},
+  },
 }
