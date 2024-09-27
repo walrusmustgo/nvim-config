@@ -1,6 +1,8 @@
 return {
   -- add gruvbox
   { "sainnhe/everforest" },
+  { "joshdick/onedark.vim" },
+  { "EdenEast/nightfox.nvim" },
   -- { "andersevenrud/nordic.nvim" },
   { "AlexvZyl/nordic.nvim" },
   -- Configure LazyVim to load gruvbox
@@ -8,7 +10,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       background = "dark",
-      colorscheme = "everforest",
+      colorscheme = "nightfox",
     },
   },
 }
