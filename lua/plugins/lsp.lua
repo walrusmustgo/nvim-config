@@ -106,6 +106,7 @@ return {
         "cmake",
         "c",
         "cpp",
+        "rust",
       },
     },
   },
