@@ -7,4 +7,8 @@ return {
     "supermaven-inc/supermaven-nvim",
     opts = {},
   },
+  {
+    "LnL7/vim-nix",
+    branch = "master",
+  }
 }
