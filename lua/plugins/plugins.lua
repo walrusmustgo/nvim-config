@@ -10,5 +10,9 @@ return {
   {
     "LnL7/vim-nix",
     branch = "master",
-  }
+  },
+  { 
+    "cordx56/rustowl", 
+    dependencies = { "neovim/nvim-lspconfig" } 
+  },
 }
