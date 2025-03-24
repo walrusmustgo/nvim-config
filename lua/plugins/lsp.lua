@@ -66,7 +66,6 @@ return {
             clangdFileStatus = true,
           },
         },
-        rustowlsp = {},
       },
       setup = {
         clangd = function(_, opts)
