@@ -9,7 +9,7 @@ return {
       model = "o1-preview", -- Set the OpenAI model to o1-preview
     },
     claude = {
-      model = "claude-3-5-sonnet-20240620", -- You can adjust this if needed
+      model = "claude-3-7-sonnet-20250219", -- You can adjust this if needed
     },
   },
   build = "make",
