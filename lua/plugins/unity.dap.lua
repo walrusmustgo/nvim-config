@@ -1,0 +1,118 @@
+-- Unity C# Debug Adapter Protocol (DAP) Configuration
+-- Following CGNvim approach: https://github.com/walcht/CGNvim
+
+return {
+  -- "mfussenegger/nvim-dap",
+  -- optional = true,
+  -- opts = function()
+  --   local dap = require("dap")
+  --
+  --   -- Check if Unity DAP is available from flake environment
+  --   local unity_dap_path = os.getenv("UNITY_DAP_PATH")
+  --   local mono_path = os.getenv("MONO_PATH") or "mono"
+  --
+  --   if unity_dap_path and vim.fn.executable(unity_dap_path) == 1 then
+  --     -- Unity Debug Adapter following CGNvim approach
+  --     if not dap.adapters["unity"] then
+  --       dap.adapters["unity"] = {
+  --         type = "executable",
+  --         command = unity_dap_path,
+  --         args = {
+  --           "--server",
+  --           "${port}",
+  --         },
+  --       }
+  --     end
+  --
+  --     -- Unity C# debug configurations
+  --     dap.configurations.cs = dap.configurations.cs or {}
+  --     table.insert(dap.configurations.cs, {
+  --       type = "unity",
+  --       request = "attach",
+  --       name = "Unity: Attach to Player",
+  --       address = function()
+  --         return vim.fn.input("Unity Player Address (default: localhost): ", "localhost")
+  --       end,
+  --       port = function()
+  --         return tonumber(vim.fn.input("Unity Player Port (default: 56000): ", "56000"))
+  --       end,
+  --     })
+  --
+  --     -- Unity Editor debug configuration
+  --     table.insert(dap.configurations.cs, {
+  --       type = "unity",
+  --       request = "attach",
+  --       name = "Unity: Attach to Editor",
+  --       address = "localhost",
+  --       port = 56000,
+  --     })
+  --
+  --     vim.notify("🎮 Unity DAP: Configured with Unity Debug Adapter", vim.log.levels.INFO)
+  --   else
+  --     -- Fallback to mono debugging if Unity DAP not available
+  --     if not dap.adapters["mono"] then
+  --       dap.adapters["mono"] = {
+  --         type = "executable",
+  --         command = mono_path,
+  --         args = {
+  --           "--soft-breakpoints",
+  --           "--debugger-agent=transport=dt_socket,address=127.0.0.1:55555,server=y",
+  --         },
+  --       }
+  --     end
+  --
+  --     dap.configurations.cs = dap.configurations.cs or {}
+  --     table.insert(dap.configurations.cs, {
+  --       type = "mono",
+  --       request = "attach",
+  --       name = "Mono: Attach to Process",
+  --       address = "127.0.0.1",
+  --       port = 55555,
+  --     })
+  --
+  --     vim.notify("🔧 Unity DAP: Using Mono fallback (Unity DAP not available)", vim.log.levels.WARN)
+  --   end
+  --
+  --   -- Unity-specific debugging commands
+  --   vim.api.nvim_create_user_command("UnityDebugAttach", function()
+  --     dap.continue()
+  --   end, { desc = "Start Unity debugging session" })
+  --
+  --   vim.api.nvim_create_user_command("UnityDebugDetach", function()
+  --     dap.disconnect()
+  --   end, { desc = "Stop Unity debugging session" })
+  --
+  --   -- Auto-detect Unity projects and add debug keymaps
+  --   vim.api.nvim_create_autocmd("FileType", {
+  --     pattern = "cs",
+  --     callback = function()
+  --       local cwd = vim.fn.getcwd()
+  --       local is_unity_project = vim.fn.isdirectory(cwd .. "/Assets") == 1
+  --
+  --       if is_unity_project then
+  --         -- Unity-specific debug keymaps
+  --         vim.keymap.set("n", "<leader>da", ":UnityDebugAttach<CR>",
+  --           { desc = "Unity: Attach Debugger", buffer = true })
+  --         vim.keymap.set("n", "<leader>dd", ":UnityDebugDetach<CR>",
+  --           { desc = "Unity: Detach Debugger", buffer = true })
+  --         vim.keymap.set("n", "<leader>db", function()
+  --           dap.toggle_breakpoint()
+  --         end, { desc = "Unity: Toggle Breakpoint", buffer = true })
+  --         vim.keymap.set("n", "<leader>dc", function()
+  --           dap.continue()
+  --         end, { desc = "Unity: Continue", buffer = true })
+  --         vim.keymap.set("n", "<leader>dn", function()
+  --           dap.step_over()
+  --         end, { desc = "Unity: Step Over", buffer = true })
+  --         vim.keymap.set("n", "<leader>di", function()
+  --           dap.step_into()
+  --         end, { desc = "Unity: Step Into", buffer = true })
+  --         vim.keymap.set("n", "<leader>do", function()
+  --           dap.step_out()
+  --         end, { desc = "Unity: Step Out", buffer = true })
+  --       end
+  --     end,
+  --   })
+  -- end,
+}
+
