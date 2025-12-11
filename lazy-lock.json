@@ -63,6 +63,7 @@
   "rustowl": { "branch": "main", "commit": "aaf7d15cc55ff6f48c577cdd6352d51fbc031aea" },
   "snacks.nvim": { "branch": "main", "commit": "bc0630e43be5699bb94dadc302c0d21615421d93" },
   "sonokai": { "branch": "master", "commit": "55bcbcffbd711660b3393350c4201c0b4b81b9bf" },
+  "strudel.nvim": { "branch": "main", "commit": "5a8e6db66502f55a988025e7f081c84843021c76" },
   "supermaven-nvim": { "branch": "main", "commit": "07d20fce48a5629686aefb0a7cd4b25e33947d50" },
   "telescope.nvim": { "branch": "master", "commit": "b4da76be54691e854d3e0e02c36b0245f945c2c7" },
   "todo-comments.nvim": { "branch": "main", "commit": "304a8d204ee787d2544d8bc23cd38d2f929e7cc5" },
