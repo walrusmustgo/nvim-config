@@ -76,8 +76,7 @@ return {
       },
     },
   },
-  -- treesitter, mason and typescript.nvim. So instead of the above, you can use:
-  { import = "lazyvim.plugins.extras.lang.typescript" },
+  -- typescript extra is now in lazyvim.json (correct import order)
 
   {
     "nvim-treesitter/nvim-treesitter",
